@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> Pong </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0" />
+        
+        <style>
+            body {
+                background: #CD5C5C;
+            }
+        </style>
+      
+        <script type="text/javascript" src="assets/js/phaser.min.js"></script>
+        <script type="text/javascript" src="assets/js/mainmenu.js"></script>
+        <script type="text/javascript" src="assets/js/play.js"></script>
+        <script type="text/javascript" src="assets/js/coordinates.js"></script>
+  </head>
+
+  <body>
+
+    <script>
+        var game = new Phaser.Game(500, 375, Phaser.AUTO, "fb");
+        
+        game.state.add('mainMenu', mainMenuState);
+        game.state.add('play', playState);
+        game.state.add('coordinates', coordState);
+        game.state.start('mainMenu');
+        
+    </script>
+     
+    </body>
+</html>
